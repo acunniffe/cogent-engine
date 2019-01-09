@@ -36,18 +36,25 @@ Cogent.render(
 ```
 This example relies on 3 components (omitted above for simplicity):
 ```javascript
-const Brackets = ({children, indent = 0}) => (<>{'{'}<line/><indent level={indent}>{children}</indent><line/>{'}'}</>)
+const Brackets = ({children, indent = 0}) => (
+	<>{'{'}
+	<line/>
+	<indent level={indent}>{children}</indent>
+	<line/>
+	{'}'}
+	</>)
 
 const ClassMethod = ({name, children}) => {
-return (<source>{namez}()<Brackets>
+return (
+<source>{name}()<Brackets>
 	{children}
 </Brackets></source>)
 }
 
 const JSClass = ({name, extendsClass, children}) => {
 
-return (<source>
-class {name}{(extendsClass) ? extendsClass : null}
+return (
+<source>class {name}{(extendsClass) ? extendsClass : null}
 <Brackets indent={1}>
 	{children}
 </Brackets>
@@ -74,10 +81,10 @@ class {name}{(extendsClass) ? extendsClass : null}
 <line/>
 <indent level={1}>
     Hello
-<indent level={1}>
-    <source>AlsoIndented</source>
-    <source>SoCool</source>
-</indent>
+    <indent level={1}>
+        <source>AlsoIndented</source>
+        <source>SoCool</source>
+    </indent>
 </indent>
 <line/>{'}'}</>
 //{
