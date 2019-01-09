@@ -1,6 +1,10 @@
 # Cogent - A code generation engine for React
 Think code generation is cool but it seems too hard? Also love react? Well you're in the right place. 
 
+```bash
+npm install react cogent-engine --save
+```
+
 ## Background 
 React provides a powerful abstraction for thinking about software development that has been applied to the internet, mobile operating systems and now to code generation. One of the hardest aspects of building a code generator is writing unwieldy templates that can be combined recursively to output clean source code. We think component-based-programming is ripe for code generation so we built a backend for React that just renders well...strings. 
 
@@ -10,6 +14,7 @@ We hope that by making codegen as easy as writing React Components more teams wi
 
 ## How it works
 tl;dr just like react!
+
 ```javascript
 import React from 'react'
 import Cogent from "cogent-engine";
