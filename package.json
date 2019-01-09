@@ -1,0 +1,27 @@
+{
+  "name": "cogent-engine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "rm -rf ./lib && babel src --out-dir lib",
+    "scratch": "npm run build && node $NODE_DEBUG_OPTION lib/index.js",
+    "test": "npm run build && find ./lib -name '*.test.js' | xargs mocha -R spec"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "react": "^16.7.0",
+    "mocha": "^5.2.0"
+  },
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "16.7.x"
+  },
+  "dependencies": {
+    "indent-string": "^3.2.0"
+  }
+}
